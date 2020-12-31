@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Lilly's Wool Medley</name>
+  <author>jupiterlily</author>
+  <packageId>lilly.shear_copy</packageId>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <description>Ever wondered why you can't shear shearable animals before you butcher them? Well, now you can! When you butcher a wooly animal it will drop a wool pile which can be processed into some useable wool. Adds wool piles and processing for woolly vanilla animals. Now rebalanced (yield is only about half of a normal shearing) and with compatibility for (Slightly) More Realistic Wool Production.</description>
+</ModMetaData>

@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="ResourceBase" Name="WoolPileBase" Abstract="True">
+    <graphicData>
+      <texPath>WoolPile/WoolPile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <MarketValue>9</MarketValue>
+      <Mass>2</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>3.4</DeteriorationRate>
+    </statBases>
+    <stackLimit>25</stackLimit>
+    <thingCategories>
+      <li>FiberRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileMegasloth</defName>
+    <label>rough megasloth fleece</label>
+    <description>A rough, uncarded megasloth fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(189,161,116)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>45</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <WoolMegasloth>22</WoolMegasloth>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileMuffalo</defName>
+    <label>rough muffalo fleece</label>
+    <description>A rough, uncarded muffalo fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(179,192,186)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>85</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <WoolMuffalo>38</WoolMuffalo>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileCamel</defName>
+    <label>rough camel fleece</label>
+    <description>A rough, uncarded camel fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(220,179,132)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>80</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <WoolCamel>35</WoolCamel>
+    </butcherProducts>
+  </ThingDef>
+  
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileAlpaca</defName>
+    <label>rough alpaca fleece</label>
+    <description>A rough, uncarded alpaca fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(237,216,174)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>55</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <WoolAlpaca>25</WoolAlpaca>
+    </butcherProducts>
+  </ThingDef>
+ 
+   <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileSheep</defName>
+    <label>rough sheep fleece</label>
+    <description>A rough, uncarded sheep fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(219,214,209)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>55</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <WoolSheep>25</WoolSheep>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileBison</defName>
+    <label>rough bison fleece</label>
+    <description>A rough, uncarded bison fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(104,69,45)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>105</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <WoolBison>50</WoolBison>
+    </butcherProducts>
+  </ThingDef>
+ 
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileMuskOx</defName>
+    <label>rough musk ox fleece</label>
+    <description>A rough, uncarded musk ox fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(94,76,66)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>87</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <AEXP_MuskOxWool>80</AEXP_MuskOxWool>
+    </butcherProducts>
+  </ThingDef>
+  
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPilecow</defName>
+    <label>rough wooly cow fleece</label>
+    <description>A rough, uncarded wooly cow fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(125,62,37)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>93</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <VFEV_WoolCow>100</VFEV_WoolCow>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileMetallic</defName>
+    <label>rough metallic fleece</label>
+    <description>A tangle of metallic nanofibres. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(80,80,90)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>105</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <SteelWool>50</SteelWool>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolPileBase">
+    <defName>WoolPileYak</defName>
+    <label>rough bison fleece</label>
+    <description>A rough, uncarded yak fleece. It can be processed into proper wool.</description>
+    <graphicData>
+      <color>(94,76,66)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>105</MarketValue>
+    </statBases>
+    <butcherProducts>
+      <WoolYak>70</WoolYak>
+    </butcherProducts>
+  </ThingDef>
+  
+</Defs>
