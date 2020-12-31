@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+<!-- not entirley sure what this does-->>
+
 	<Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -36,6 +38,8 @@
             </li>
         </operations>
     </Operation>
+
+	<!-- I think this checks if there is and then adds a butcherable body part to the 2nd life stage -->
 	
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
@@ -197,7 +201,7 @@
 		  </operations>
 	</Operation>
 
-
+	<!-- This changes/adds? the head attack tool to be the wool pile so that you can remove it from the body after death -->
 
 	<Operation Class="PatchOperationAdd">
 	  <xpath>*/PawnKindDef[defName = "Megasloth"]/lifeStages/li[2]/butcherBodyPart</xpath>
@@ -289,7 +293,7 @@
 	  </value>
 	</Operation>
 
-
+<!-- this creates a new category so the menus are more organised -->
 
 	<Operation Class="PatchOperationReplace">
 	  <xpath>*/ThingDef[@Name = "WoolBase"]/thingCategories</xpath>
@@ -300,7 +304,7 @@
 	  </value>
 	</Operation>
 
-
+<!-- this changes what you get from shearing the animal to the wool pile -->
 	
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolMegasloth"]/woolDef</xpath>
@@ -374,7 +378,7 @@
 
 
 
-
+<!-- This changes the amount of wool piles the animals drops to 4. It doesn't work for android sheep -->
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileMegasloth"]/woolAmount</xpath>
