@@ -2,294 +2,213 @@
 <Patch>
 
 <!-- not entirley sure what this does-->>
-
-	<Operation Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-            <li Class="PatchOperationTest">
-                <xpath>/Defs/ThingDef[defName = "Yak"]/comps</xpath>
-                <success>Invert</success>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "Yak"]</xpath>
-                <value>
-                    <comps/>
-                </value>
-            </li>
-        </operations>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Yak"]/comps</xpath>
+            <value>
+            <li Class="CompProperties_Shearable">
+                <woolDef>WoolYak</woolDef>
+                <shearIntervalDays>15</shearIntervalDays>
+                <woolAmount>4</woolAmount>
+			</value>
     </Operation>
-	
-    <Operation Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-            <li Class="PatchOperationTest">
-                <xpath>/Defs/ThingDef[defName = "Yak"]/comps/li[@Class="CompProperties_Shearable"]</xpath>
-                <success>Invert</success>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "Yak"]/comps</xpath>
-                <value>
-                    <li Class="CompProperties_Shearable">
-                        <woolDef>WoolYak</woolDef>
-                        <shearIntervalDays>12</shearIntervalDays>
-                        <woolAmount>3</woolAmount>
-                    </li>
-                </value>
-            </li>
-        </operations>
-    </Operation>
-
-	<!-- I think this checks if there is and then adds a butcherable body part to the 2nd life stage -->
-	
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "Megasloth"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "Megasloth"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-	
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "Muffalo"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "Muffalo"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "AEXP_Camel"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "AEXP_Camel"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-	
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "Alpaca"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "Alpaca"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "Sheep"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "Sheep"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "Bison"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "Bison"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "AEXP_Muskox"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "AEXP_Muskox"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "VFEV_WoolyCow"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "VFEV_WoolyCow"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "RoboticSheep"]/lifeStages/li[1]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "RoboticSheep"]/lifeStages/li[1]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		  <operations>
-			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "Yak"]/lifeStages/li[2]/butcherBodyPart</xpath>
-			  <success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "Yak"]/lifeStages/li[2]</xpath>
-			  <value>
-				<butcherBodyPart />
-			  </value>
-			</li>
-		  </operations>
-	</Operation>
 
 	<!-- This changes/adds? the head attack tool to be the wool pile so that you can remove it from the body after death -->
 
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "Megasloth"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "Megasloth"]/lifeStages/li[2]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPileMegasloth</thing>
           <allowFemale>true</allowFemale>
+		</butcherBodyPart>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "Muffalo"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "Muffalo"]/lifeStages/li[2]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPileMuffalo</thing>
           <allowFemale>true</allowFemale>
+		</butcherBodyPart>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "AEXP_Camel"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "AEXP_Camel"]/lifeStages/li[2]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPileCamel</thing>
           <allowFemale>true</allowFemale>
+		</butcherBodyPart>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "Alpaca"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "Alpaca"]/lifeStages/li[2]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPileAlpaca</thing>
           <allowFemale>true</allowFemale>
+		</butcherBodyPart>
 	  </value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "Sheep"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "Sheep"]/lifeStages/li[2]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPileSheep</thing>
           <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "Bison"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "Bison"]/lifeStages/li[2]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPileBison</thing>
           <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "AEXP_Muskox"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "AEXP_Muskox"]/lifeStages/li[2]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPileMuskOx</thing>
           <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "VFEV_WoolyCow"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "VFEV_WoolyCow"]/lifeStages/li[2]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPilecow</thing>
           <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "Yak"]/lifeStages/li[2]</xpath>
+	  <value>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPileYak</thing>
+          <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
+	  </value>
+	</Operation>
+
+<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "Megasloth"]/lifeStages/li[3]</xpath>
+	  <value>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPileMegasloth</thing>
+          <allowFemale>true</allowFemale>
+		</butcherBodyPart>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "Muffalo"]/lifeStages/li[3]</xpath>
+	  <value>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPileMuffalo</thing>
+          <allowFemale>true</allowFemale>
+		</butcherBodyPart>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "AEXP_Camel"]/lifeStages/li[3]</xpath>
+	  <value>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPileCamel</thing>
+          <allowFemale>true</allowFemale>
+		</butcherBodyPart>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "Alpaca"]/lifeStages/li[3]</xpath>
+	  <value>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPileAlpaca</thing>
+          <allowFemale>true</allowFemale>
+		</butcherBodyPart>
 	  </value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "RoboticSheep"]/lifeStages/li[1]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "Sheep"]/lifeStages/li[3]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
-          <thing>SteelWool</thing>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPileSheep</thing>
           <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "Yak"]/lifeStages/li[2]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "Bison"]/lifeStages/li[3]</xpath>
 	  <value>
-          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPileBison</thing>
+          <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "AEXP_Muskox"]/lifeStages/li[3]</xpath>
+	  <value>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPileMuskOx</thing>
+          <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "VFEV_WoolyCow"]/lifeStages/li[3]</xpath>
+	  <value>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
+          <thing>WoolPilecow</thing>
+          <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "Yak"]/lifeStages/li[3]</xpath>
+	  <value>
+	  	<butcherBodyPart>
+          <bodyPartGroup>Torso</bodyPartGroup>
           <thing>WoolPileYak</thing>
           <allowFemale>true</allowFemale>
+	  	</butcherBodyPart>
 	  </value>
 	</Operation>
 
@@ -381,70 +300,7 @@
 <!-- This changes the amount of wool piles the animals drops to 4. It doesn't work for android sheep -->
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileMegasloth"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileMuffalo"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileCamel"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileAlpaca"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileSheep"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileBison"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-
-  	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileMuskOx"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileCow"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileMetallic"]/woolAmount</xpath>
-		<value>
-			<woolAmount>4</woolAmount>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolPileYak"]/woolAmount</xpath>
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable"]/woolAmount</xpath>
 		<value>
 			<woolAmount>4</woolAmount>
 		</value>
