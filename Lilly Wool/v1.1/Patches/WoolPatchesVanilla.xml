@@ -265,6 +265,31 @@
 	  </value>
 	</Operation>
 
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		  <operations>
+			<li Class="PatchOperationTest">
+			  <xpath>*/PawnKindDef[defName = "RoyalThrumbo"]/lifeStages/li[3]/butcherBodyPart</xpath>
+			  <success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>*/PawnKindDef[defName = "RoyalThrumbo"]/lifeStages/li[3]</xpath>
+			  <value>
+				<butcherBodyPart />
+			  </value>
+			</li>
+		  </operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	  <xpath>*/PawnKindDef[defName = "RoyalThrumbo"]/lifeStages/li[3]/butcherBodyPart</xpath>
+	  <value>
+          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+          <thing>WoolPileThrumbo</thing>
+          <allowFemale>true</allowFemale>
+	  </value>
+	</Operation>
+
 <!-- this creates a new category so the menus are more organised -->
 
 	<Operation Class="PatchOperationReplace">
@@ -331,6 +356,13 @@
 		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "VFEV_WoolCow"]/woolDef</xpath>
 		<value>
 			<woolDef>WoolPileCow</woolDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "RoyalThrumbo_Wool"]/woolDef</xpath>
+		<value>
+			<woolDef>WoolPileThrumbo</woolDef>
 		</value>
 	</Operation>
 

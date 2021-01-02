@@ -141,17 +141,17 @@
   </ThingDef>
 
   <ThingDef ParentName="WoolPileBase">
-    <defName>WoolPileMetallic</defName>
-    <label>rough metallic fleece</label>
-    <description>A tangle of metallic nanofibres. It can be processed into proper wool.</description>
+    <defName>WoolPileThrumbo</defName>
+    <label>rough thrumbo fleece</label>
+    <description>An uncarded fleece of royal thrumbo wool. It can be processed into proper wool.</description>
     <graphicData>
-      <color>(80,80,90)</color>
+      <color>(240,225,205)</color>
     </graphicData>
     <statBases>
-      <MarketValue>105</MarketValue>
+      <MarketValue>305</MarketValue>
     </statBases>
     <butcherProducts>
-      <SteelWool>15</SteelWool>
+      <RoyalThrumbo_Wool>60</RoyalThrumbo_Wool>
     </butcherProducts>
   </ThingDef>
 
