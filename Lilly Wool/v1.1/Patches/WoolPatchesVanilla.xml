@@ -32,7 +32,7 @@
                 <value>
                     <li Class="CompProperties_Shearable">
                         <woolDef>WoolPileYak</woolDef>
-                        <shearIntervalDays>1</shearIntervalDays>
+                        <shearIntervalDays>12</shearIntervalDays>
                         <woolAmount>4</woolAmount>
                     </li>
                 </value>
@@ -94,11 +94,11 @@
 		<success>Always</success>
 		  <operations>
 			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "Camel"]/lifeStages/li[3]/butcherBodyPart</xpath>
+			  <xpath>*/PawnKindDef[defName = "AEXP_Camel"]/lifeStages/li[3]/butcherBodyPart</xpath>
 			  <success>Invert</success>
 			</li>
 			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "Camel"]/lifeStages/li[3]</xpath>
+			  <xpath>*/PawnKindDef[defName = "AEXP_Camel"]/lifeStages/li[3]</xpath>
 			  <value>
 				<butcherBodyPart />
 			  </value>
@@ -107,7 +107,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "Camel"]/lifeStages/li[3]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "AEXP_Camel"]/lifeStages/li[3]/butcherBodyPart</xpath>
 	  <value>
           <bodyPartGroup>HeadAttackTool</bodyPartGroup>
           <thing>WoolPileCamel</thing>
@@ -194,11 +194,11 @@
 		<success>Always</success>
 		  <operations>
 			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "AEXP_MuskOx"]/lifeStages/li[3]/butcherBodyPart</xpath>
+			  <xpath>*/PawnKindDef[defName = "AEXP_Muskox"]/lifeStages/li[3]/butcherBodyPart</xpath>
 			  <success>Invert</success>
 			</li>
 			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "AEXP_MuskOx"]/lifeStages/li[3]</xpath>
+			  <xpath>*/PawnKindDef[defName = "AEXP_Muskox"]/lifeStages/li[3]</xpath>
 			  <value>
 				<butcherBodyPart />
 			  </value>
@@ -207,7 +207,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "AEXP_MuskOx"]/lifeStages/li[3]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "AEXP_Muskox"]/lifeStages/li[3]/butcherBodyPart</xpath>
 	  <value>
           <bodyPartGroup>HeadAttackTool</bodyPartGroup>
           <thing>WoolPileMuskOx</thing>
@@ -219,11 +219,11 @@
 		<success>Always</success>
 		  <operations>
 			<li Class="PatchOperationTest">
-			  <xpath>*/PawnKindDef[defName = "VFEV_WoolCow"]/lifeStages/li[3]/butcherBodyPart</xpath>
+			  <xpath>*/PawnKindDef[defName = "VFEV_WoolyCow"]/lifeStages/li[3]/butcherBodyPart</xpath>
 			  <success>Invert</success>
 			</li>
 			<li Class="PatchOperationAdd">
-			  <xpath>*/PawnKindDef[defName = "VFEV_WoolCow"]/lifeStages/li[3]</xpath>
+			  <xpath>*/PawnKindDef[defName = "VFEV_WoolyCow"]/lifeStages/li[3]</xpath>
 			  <value>
 				<butcherBodyPart />
 			  </value>
@@ -232,7 +232,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-	  <xpath>*/PawnKindDef[defName = "VFEV_WoolCow"]/lifeStages/li[3]/butcherBodyPart</xpath>
+	  <xpath>*/PawnKindDef[defName = "VFEV_WoolyCow"]/lifeStages/li[3]/butcherBodyPart</xpath>
 	  <value>
           <bodyPartGroup>HeadAttackTool</bodyPartGroup>
           <thing>WoolPileCow</thing>
@@ -331,13 +331,6 @@
 		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "VFEV_WoolCow"]/woolDef</xpath>
 		<value>
 			<woolDef>WoolPileCow</woolDef>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolYak"]/woolDef</xpath>
-		<value>
-			<woolDef>WoolPileYak</woolDef>
 		</value>
 	</Operation>
 
